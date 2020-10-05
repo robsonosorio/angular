@@ -44,6 +44,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
+import { NavComponent } from './components/template/nav/nav.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { FooterComponent } from './components/template/footer/footer.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
