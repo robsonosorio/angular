@@ -45,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
+import { HomeComponent } from './views/home/home.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { NavComponent } from './components/template/nav/nav.component';
     HeaderComponent,
     FooterComponent,
     NavComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
