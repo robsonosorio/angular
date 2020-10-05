@@ -48,6 +48,7 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 import { UserCrudComponent } from './views/user-crud/user-crud.component';
 import { AppRoutingModule } from './app-routing.module';
+import { UserCreateComponent } from './components/user/user-create/user-create.component';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { AppRoutingModule } from './app-routing.module';
     NavComponent,
     HomeComponent,
     UserCrudComponent,
+    UserCreateComponent,
   ],
   imports: [
     BrowserModule,
