@@ -46,6 +46,8 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
+import { UserCrudComponent } from './views/user-crud/user-crud.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -55,9 +57,11 @@ import { HomeComponent } from './views/home/home.component';
     FooterComponent,
     NavComponent,
     HomeComponent,
+    UserCrudComponent,
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
