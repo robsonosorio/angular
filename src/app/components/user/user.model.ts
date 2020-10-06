@@ -1,4 +1,5 @@
-export interface Product {
+import { UserCreateComponent } from './user-create/user-create.component';
+export interface User {
   id?: number
   name: string
   email: string
