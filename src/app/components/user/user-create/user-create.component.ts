@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserCreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  createUser(): void {
+    this.userService.showMessage('Cadastro realizado com sucesso.')
+  }
+
+  cancel(): void {
+    this.router.navigate(['/users'])
+  }
 }
