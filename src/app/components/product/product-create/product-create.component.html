@@ -1,28 +1,27 @@
 <div layout="column" layout-fill> <!--VERIFICAR DEPOIS -->
   <div align="center" layout="row" layout-align="center center" >
     <mat-card class="info-card mat-elevation-z8">
-      <mat-card-title>Cadastro de Usuario</mat-card-title>
+      <mat-card-title>Cadastro de Produto</mat-card-title>
       <mat-card-content fxLayout="column" fxLayoutAlign="stretch" >
         <form fxLayout="column" fxLayoutAlign="start stretch" #formUser="ngForm" (ngSubmit)="ngSubmit()">
           <div fxFlex="100"  fxLayout="row" fxLayoutAlign="space-between  start" >
             <mat-form-field fxFlex="45" >
-              <input matInput type="text" class="form-control" value="" placeholder="Name" [(ngModel)]="user.name" name="name">
+              <input matInput type="text" class="form-control" value="" placeholder="Name" [(ngModel)]="product.name" name="name">
             </mat-form-field>
             <mat-form-field fxFlex="45">
-              <input matInput type="text" class="form-control" value="" placeholder="Email" [(ngModel)]="user.email" name="email">
+              <input matInput type="text" class="form-control" value="" placeholder="Description" [(ngModel)]="product.description" name="description">
             </mat-form-field>
           </div>
           <div fxFlex="100"  fxLayout="row" fxLayoutAlign="space-between  start">
             <mat-form-field fxFlex="45">
-              <input matInput   type="text" class="form-control" value="" placeholder="Senha" [(ngModel)]="user.password" name="password">
+              <input matInput   type="text" class="form-control" value="" placeholder="Logo" [(ngModel)]="product.logo" name="logo">
             </mat-form-field>
-            <mat-radio-group  fxFlex="45" fxLayout="column" fxLayoutAlign="spacearound start" [(ngModel)]="user.adm" name="adm">
-              <mat-radio-button value=false checked>Usuario</mat-radio-button>
-              <mat-radio-button value=true >Administrador</mat-radio-button>
-            </mat-radio-group>
+            <mat-form-field fxFlex="45">
+              <input matInput   type="text" class="form-control" value="" placeholder="Manual" [(ngModel)]="product.manual" name="manual">
+            </mat-form-field>
           </div>
           <div  fxFlex="100"  fxLayout="row" fxLayoutAlign="space-between  start">
-          <button mat-button color="primary" type="submit" (click)="createUser()" >
+          <button mat-button color="primary" type="submit" (click)="createProduct()" >
             <mat-icon>done</mat-icon>Salvar
           </button>
           <button mat-button type="submit" (click)="cancel()" >

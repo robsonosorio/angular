@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user.model'
+
 @Component({
   selector: 'app-user-create',
   templateUrl: './user-create.component.html',
@@ -13,11 +14,9 @@ export class UserCreateComponent implements OnInit {
     name: '',
     email: '',
     password: '',
-    adm_user: true,
-    active: true
+    adm: false, // mudar o usuario ADMIN
+    active: true,
   }
-
-
 
   constructor(private userService: UserService,
     private router: Router) { }
@@ -25,10 +24,14 @@ export class UserCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngSubmit() {
+    console.log(this.user);
+  }
+
   createUser(): void {
     this.userService.create(this.user).subscribe(() => {
-      this.userService.showMessage('Cadastro realizado com sucesso.')
-      this.router.navigate(['/users'])
+    this.userService.showMessage('Cadastro realizado com sucesso.')
+    this.router.navigate(['/users'])
     })
   }
 

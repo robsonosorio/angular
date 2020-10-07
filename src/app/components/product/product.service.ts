@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
-import { User } from './user.model';
+import { Product } from './product.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class ProductService {
 
-  baseUrl = 'http://localhost:3000/users'
+  baseUrl = 'http://localhost:3000/products'
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient ) { }
 
@@ -21,7 +21,7 @@ export class UserService {
     })
   }
 
-  create(user: User): Observable<User> {
-    return this.http.post<User>(this.baseUrl, user);
+  create(Product: Product): Observable<Product> {
+    return this.http.post<Product>(this.baseUrl, Product);
   }
 }
