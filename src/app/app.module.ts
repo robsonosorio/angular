@@ -49,9 +49,11 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 import { UserCrudComponent } from './views/user-crud/user-crud.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout'
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
 
 
 @NgModule({
@@ -65,12 +67,14 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     UserCreateComponent,
     ProductCrudComponent,
     ProductCreateComponent,
+    ProductReadComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    FlexLayoutModule,
     HttpClientModule,
     MatCheckboxModule,
     MatCheckboxModule,
@@ -103,7 +107,6 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-
     MatBadgeModule,
     MatBottomSheetModule,
     MatDividerModule,
