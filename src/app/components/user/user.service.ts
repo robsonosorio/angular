@@ -9,7 +9,7 @@ import { User } from './user.model';
 })
 export class UserService {
 
-  baseUrl = 'http://localhost:3000/users'
+  url = 'http://localhost:3000/users'
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient ) { }
 
@@ -22,6 +22,6 @@ export class UserService {
   }
 
   create(user: User): Observable<User> {
-    return this.http.post<User>(this.baseUrl, user);
+    return this.http.post<User>(this.url, user);
   }
 }
