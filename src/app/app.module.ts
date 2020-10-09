@@ -56,6 +56,7 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -72,6 +73,7 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
     ProductReadComponent,
     ProductUpdateComponent,
     ProductDeleteComponent,
+    LoginComponent,
   ],
   imports: [
     AppRoutingModule,

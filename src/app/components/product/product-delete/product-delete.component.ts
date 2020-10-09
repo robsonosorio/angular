@@ -17,7 +17,7 @@ export class ProductDeleteComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')
+    const id = +this.route.snapshot.paramMap.get('id')
     this.productService.getById(id).subscribe(product => {
     this.product = product
     });

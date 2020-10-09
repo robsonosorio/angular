@@ -29,7 +29,7 @@ export class ProductService {
     return this.http.get<Product[]>(this.url);
   }
 
-  getById(id: string): Observable<Product> {
+  getById(id: number): Observable<Product> {
     return this.http.get<Product>(`${this.url}/${id}`);
   }
 
@@ -37,7 +37,7 @@ export class ProductService {
     return this.http.put<Product>(`${this.url}/${product.id}`, product);
   }
 
-  deleteProducts(id: string): Observable<Product> {
+  deleteProducts(id: number): Observable<Product> {
     return this.http.delete<Product>(`${this.url}/${id}`);
   }
 }
