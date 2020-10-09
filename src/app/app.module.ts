@@ -54,6 +54,7 @@ import { UserCreateComponent } from './components/user/user-create/user-create.c
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 
 
 @NgModule({
@@ -68,6 +69,7 @@ import { ProductReadComponent } from './components/product/product-read/product-
     ProductCrudComponent,
     ProductCreateComponent,
     ProductReadComponent,
+    ProductUpdateComponent,
   ],
   imports: [
     AppRoutingModule,

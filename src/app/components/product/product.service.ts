@@ -21,11 +21,19 @@ export class ProductService {
     })
   }
 
-  postProducts(Product: Product): Observable<Product> {
-    return this.http.post<Product>(this.url, Product);
+  postProducts(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.url, product);
   }
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.url);
+  }
+
+  getById(id: string): Observable<Product> {
+    return this.http.get<Product>(`${this.url}/${id}`);
+  }
+
+  putProducts(product: Product): Observable<Product> {
+    return this.http.put<Product>(`${this.url}/${product.id}`, product);
   }
 }
