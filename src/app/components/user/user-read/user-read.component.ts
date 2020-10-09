@@ -15,7 +15,7 @@ export class UserReadComponent implements OnInit {
   constructor(private userService: UserService ) { }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(users => {
+    this.userService.getUsers().subscribe(users => {
       this.users = users
       console.log(users)
     })
