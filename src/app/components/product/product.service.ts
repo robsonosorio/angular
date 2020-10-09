@@ -21,12 +21,12 @@ export class ProductService {
     })
   }
 
-  postProducts(product: Product): Observable<Product> {
-    return this.http.post<Product>(this.url, product);
-  }
-
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.url);
+  }
+
+  postProducts(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.url, product);
   }
 
   getById(id: number): Observable<Product> {

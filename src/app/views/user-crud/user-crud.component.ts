@@ -18,7 +18,4 @@ export class UserCrudComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-
-
 }

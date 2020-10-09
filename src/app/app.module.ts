@@ -1,10 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
 import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -43,21 +41,23 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout'
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 import { UserCrudComponent } from './views/user-crud/user-crud.component';
-import { AppRoutingModule } from './app-routing.module';
-import { FlexLayoutModule } from '@angular/flex-layout'
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
+import { UserUpdateComponent } from './components/user/user-update/user-update.component';
+import { UserReadComponent } from './components/user/user-read/user-read.component';
+import { UserDeleteComponent } from './components/user/user-delete/user-delete.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
-import { LoginComponent } from './components/login/login.component';
-
 
 @NgModule({
   declarations: [
@@ -74,6 +74,9 @@ import { LoginComponent } from './components/login/login.component';
     ProductUpdateComponent,
     ProductDeleteComponent,
     LoginComponent,
+    UserUpdateComponent,
+    UserReadComponent,
+    UserDeleteComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -21,7 +21,23 @@ export class UserService {
     })
   }
 
-  create(user: User): Observable<User> {
+  getUser(): Observable<User[]> {
+    return this.http.get<User[]>(this.url);
+  }
+
+  postUser(user: User): Observable<User> {
     return this.http.post<User>(this.url, user);
+  }
+
+  getById(id: number): Observable<User> {
+    return this.http.get<User>(`${this.url}/${id}`);
+  }
+
+  putUser(user: User): Observable<User> {
+    return this.http.put<User>(`${this.url}/${user.id}`, user);
+  }
+
+  deleteUser(id: number): Observable<User> {
+    return this.http.delete<User>(`${this.url}/${id}`);
   }
 }
