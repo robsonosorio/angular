@@ -5,7 +5,7 @@
       <mat-card-title>Login</mat-card-title>
       <mat-card-content fxLayout="column" fxLayoutAlign="stretch" >
         <form fxLayout="column" fxLayoutAlign="start stretch" #formUser="ngForm" >
-          <div fxFlex="100"  fxLayout="row" fxLayoutAlign="space-between  start" >
+          <div fxFlex="100"  fxLayout="column" fxLayoutAlign="space-between  start" >
             <mat-form-field fxFlex="45" >
               <input matInput type="text" class="form-control" value="" placeholder="Email" name="email">
             </mat-form-field>
@@ -17,9 +17,9 @@
             <button mat-raised-button>
               Login
             </button>
-          <button mat-raised-button (click)="navigateToUserCreate()">
+            <button mat-raised-button (click)="navigateToUserCreate()">
             Novo cadastro
-          </button>
+            </button>
         </div>
         </form>
       </mat-card-content>

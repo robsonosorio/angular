@@ -10,12 +10,16 @@ export class UserCrudComponent implements OnInit {
 
   constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
-      title: 'Login',
-      icon: 'login',
+      title: 'Cadastro',
+      icon: 'person',
       routeUrl: '/users'
     }
   }
 
   ngOnInit(): void {
   }
+
+  navigateToUserCreate(): void {
+    this.router.navigate(['/users/create'])
+    }
 }

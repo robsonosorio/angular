@@ -1,5 +1,6 @@
 import { HeaderService } from './../../services/header.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private headerService: HeaderService) {
+  constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
       title: 'Início',
       icon: 'home',
