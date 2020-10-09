@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
-import { HeaderService } from 'src/app/services/header.service';
+import { HeaderService } from './../../services/header.service';
 @Component({
   selector: 'app-user-crud',
   templateUrl: './user-crud.component.html',

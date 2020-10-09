@@ -3,7 +3,6 @@ import { UserService } from '../../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-user-update',
   templateUrl: './user-update.component.html',
@@ -38,5 +37,4 @@ export class UserUpdateComponent implements OnInit {
   cancel(): void {
     this.router.navigate(['/users'])
   }
-
 }

@@ -1,26 +1,24 @@
-   <!-- <mat-card class="info-card mat-elevation-z8">
-      <mat-card-title>Cadastro de Usuario</mat-card-title>
-      <mat-card-content >
-        <form  #formUser="ngForm" (ngSubmit)="ngSubmit()">
-          <div >
-            <mat-form-field >
-              <input matInput type="text" class="form-control" placeholder="Name" [(ngModel)]="user.name" name="name">
+<div layout="column" layout-fill>
+  <div align="center" layout="row" layout-align="center center">
+    <mat-card class="info-card mat-elevation-z8" flex="80" >
+      <mat-card-title>Alterar Usuário</mat-card-title>
+      <mat-card-content fxLayout="column" fxLayoutAlign="stretch" >
+        <form fxLayout="column" fxLayoutAlign="start stretch" #formUser="ngForm" (ngSubmit)="ngSubmit()">
+          <div fxFlex="100"  fxLayout="row" fxLayoutAlign="space-between  start" >
+            <mat-form-field fxFlex="45" >
+              <input matInput type="text" class="form-control" value="" placeholder="Name" [(ngModel)]="user.name" name="name">
             </mat-form-field>
-            <mat-form-field >
-              <input matInput type="text" class="form-control" placeholder="Email" [(ngModel)]="user.email" name="email">
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" class="form-control" value="" placeholder="Email" [(ngModel)]="user.email" name="email">
             </mat-form-field>
           </div>
-          <div >
-            <mat-form-field >
-              <input matInput type="text" class="form-control" placeholder="Senha" [(ngModel)]="user.password" name="password">
+          <div fxFlex="100"  fxLayout="row" fxLayoutAlign="space-between  start">
+            <mat-form-field fxFlex="45">
+              <input matInput  type="text" class="form-control" value="" placeholder="Senha" [(ngModel)]="user.password" name="password">
             </mat-form-field>
-            <mat-radio-group [(ngModel)]="user.adm" name="adm">
-              <mat-radio-button value=false checked>Usuario</mat-radio-button>
-              <mat-radio-button value=true >Administrador</mat-radio-button>
-            </mat-radio-group>
           </div>
-          <div >
-          <button mat-button color="primary" type="submit" (click)="createUser()" >
+          <div  fxFlex="100"  fxLayout="row" fxLayoutAlign="center  center">
+            <button mat-button color="primary" type="submit" (click)="updateUser()" >
             <mat-icon>done</mat-icon>Salvar
           </button>
           <button mat-button type="submit" (click)="cancel()" >
@@ -29,50 +27,6 @@
         </div>
         </form>
       </mat-card-content>
-    </mat-card>-->
-
-
-    <div layout="column" layout-fill>
-      <div align="center" layout="row" layout-align="center center">
-        <mat-card class="info-card mat-elevation-z8" flex="80" >
-        <mat-card-title>Alterar Usuário</mat-card-title>
-        <mat-card-content fxLayout="column" fxLayoutAlign="stretch" >
-          <form fxLayout="column" fxLayoutAlign="start stretch" #formUser="ngForm" (ngSubmit)="ngSubmit()">
-            <div fxFlex="100"  fxLayout="row" fxLayoutAlign="space-between  start" >
-              <mat-form-field fxFlex="45" >
-                <input matInput type="text" class="form-control" value="" placeholder="Name" [(ngModel)]="user.name" name="name">
-              </mat-form-field>
-              <mat-form-field fxFlex="45">
-                <input matInput type="text" class="form-control" value="" placeholder="Email" [(ngModel)]="user.email" name="email">
-              </mat-form-field>
-            </div>
-            <div fxFlex="100"  fxLayout="row" fxLayoutAlign="space-between  start">
-              <mat-form-field fxFlex="45">
-                <input matInput   type="text" class="form-control" value="" placeholder="Senha" [(ngModel)]="user.password" name="password">
-              </mat-form-field>
-
-              <div class="mat-radio-group" fxFlex="45" fxLayout="column" fxLayoutAlign="space-between start">
-              <mat-radio-group  fxFlex="45" fxLayout="row " fxLayoutAlign="space-between start" [(ngModel)]="user.adm" name="adm">
-                <mat-radio-button value=false checked>Usuario</mat-radio-button>
-                <mat-radio-button value=true >Administrador</mat-radio-button>
-              </mat-radio-group>
-              <mat-radio-group  fxFlex="45" fxLayout="row " fxLayoutAlign="space-between start" [(ngModel)]="user.active" name="active">
-                <mat-radio-button value=true checked>Ativo</mat-radio-button>
-                <mat-radio-button value=false >Inativo</mat-radio-button>
-              </mat-radio-group>
-            </div>
-
-            </div>
-            <div  fxFlex="100"  fxLayout="row" fxLayoutAlign="center  center">
-            <button mat-button color="primary" type="submit" (click)="updateUser()" >
-              <mat-icon>done</mat-icon>Salvar
-            </button>
-            <button mat-button type="submit" (click)="cancel()" >
-              <mat-icon>close</mat-icon>Cancelar
-            </button>
-          </div>
-          </form>
-        </mat-card-content>
-      </mat-card>
-    </div>
+    </mat-card>
   </div>
+</div>
