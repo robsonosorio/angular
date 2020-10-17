@@ -27,6 +27,16 @@ export class ProductCreateComponent implements OnInit {
     console.log(this.product);
   }
 
+  upload(event) {
+    const file = event.target.files[0]
+    const reader = new FileReader()
+
+    reader.onloadend = () => {
+      console.log(file)
+    }
+    reader.readAsDataURL(file)
+  }
+
   createProduct(): void {
     this.productService.postProducts(this.product).subscribe(() => {
     this.productService.showMessage('Produto cadastrado com sucesso.')
