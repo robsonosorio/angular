@@ -30,13 +30,13 @@ export class UserDeleteComponent implements OnInit {
 
   deleteUser(): void {
     this.userService.deleteUsers(this.user.id).subscribe(() => {
-    this.userService.showMessage('Produto deletado com sucesso.')
-    this.router.navigate(['/products'])
+    this.userService.showMessage('Usuário deletado com sucesso.')
+    this.router.navigate(['/users'])
     })
   }
 
   cancel(): void {
-    this.router.navigate(['/products'])
+    this.router.navigate(['/users'])
   }
 
 }
