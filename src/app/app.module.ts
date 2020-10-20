@@ -47,7 +47,6 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
-import { LoginComponent } from './components/login/login.component';
 import { UserCrudComponent } from './views/user-crud/user-crud.component';
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
@@ -58,7 +57,7 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
-import { LoginPageComponent } from './views/login-page/login-page.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -74,11 +73,9 @@ import { LoginPageComponent } from './views/login-page/login-page.component';
     ProductReadComponent,
     ProductUpdateComponent,
     ProductDeleteComponent,
-    LoginComponent,
     UserUpdateComponent,
     UserReadComponent,
     UserDeleteComponent,
-    LoginPageComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -124,6 +121,7 @@ import { LoginPageComponent } from './views/login-page/login-page.component';
     MatNativeDateModule,
     MatRippleModule,
     MatTreeModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

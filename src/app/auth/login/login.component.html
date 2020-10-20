@@ -1,0 +1,29 @@
+<div layout="column" layout-fill>
+  <div align="center" layout="row" layout-align="center center">
+    <mat-card class="info-card mat-elevation-z8" flex="80">
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-content fxLayout="column" fxLayoutAlign="stretch">
+        <form fxLayout="column" fxLayoutAlign="start stretch" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div fxFlex="100" fxLayout="column" fxLayoutAlign="space-between  start">
+            <mat-form-field fxFlex="45">
+              <input matInput type="email"  formControlName="email"
+              placeholder="Email" name="email" autocomplete="false" readonly="false">
+            </mat-form-field>
+            <mat-form-field fxFlex="45">
+              <input matInput type="password" formControlName="password"
+              placeholder="Senha" name="password" autocomplete="password">
+            </mat-form-field>
+          </div>
+          <div fxFlex="100" fxLayout="row" fxLayoutAlign="center  center">
+            <button mat-raised-button>
+              Login
+            </button>
+            <button mat-raised-button (click)="navigateToUserCreate()">
+              Novo cadastro
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

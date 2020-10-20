@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './views/home/home.component';
-import { LoginPageComponent } from './views/login-page/login-page.component';
 import { UserCrudComponent } from './views/user-crud/user-crud.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
@@ -16,7 +15,6 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "login", component: LoginPageComponent },
   { path: "users", component: UserCrudComponent },
   { path: "users/create", component: UserCreateComponent },
   {  path: "users/update/:id", component: UserUpdateComponent },

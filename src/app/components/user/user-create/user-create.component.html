@@ -1,4 +1,4 @@
-> <div layout="column" layout-fill>
+<div layout="column" layout-fill>
   <div align="center" layout="row" layout-align="center center">
     <mat-card class="info-card mat-elevation-z8" flex="80">
       <mat-card-title>Novo Usuário</mat-card-title>
@@ -16,8 +16,8 @@
           </div>
           <div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between  start">
             <mat-form-field fxFlex="45">
-              <input matInput type="text" class="form-control" value="" placeholder="Senha" [(ngModel)]="user.password"
-                name="password">
+              <input matInput type="password" class="form-control" value="" placeholder="Senha" [(ngModel)]="user.password"
+                name="password" autocomplete="off">
             </mat-form-field>
 
             <div class="mat-radio-group" fxFlex="45" fxLayout="column" fxLayoutAlign="space-between start">

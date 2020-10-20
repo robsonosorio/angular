@@ -31,11 +31,11 @@ export class UserCreateComponent implements OnInit {
   createUser(): void {
     this.userService.postUsers(this.user).subscribe(() => {
     this.userService.showMessage('Usuário cadastrado com sucesso.')
-    this.router.navigate(['/users'])
+    this.router.navigate(['/auth/login'])
     })
   }
 
   cancel(): void {
-    this.router.navigate(['/users'])
+    this.router.navigate(['/auth/login'])
   }
 }
